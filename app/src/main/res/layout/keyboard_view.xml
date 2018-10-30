@@ -6,6 +6,6 @@
     android:layout_height="wrap_content"
     android:keyPreviewLayout="@layout/key_preview"
     android:layout_alignParentBottom="true"
-    android:background="@color/colorPrimary"
+    android:keyBackground="@drawable/teclas"
     android:fontFamily="@font/libras">
 </android.inputmethodservice.KeyboardView>

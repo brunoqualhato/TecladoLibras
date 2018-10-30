@@ -12,14 +12,16 @@ import android.view.inputmethod.InputConnection;
 public class MetodoEntradaTeclado extends InputMethodService
         implements KeyboardView.OnKeyboardActionListener {
 
+    private int mKeyboardState = R.integer.telado_normal;
     private KeyboardView tecladoVew;
-    private Keyboard teclado;
+    private Keyboard teclado, tecladoNumerico;
     private boolean caps = false;
 
     @Override
     public View onCreateInputView() {
         tecladoVew = (KeyboardView) getLayoutInflater().inflate(R.layout.keyboard_view, null);
-        teclado = new Keyboard(this, R.xml.number_pad);
+        teclado = new Keyboard(this, R.xml.teclado_padrao,0);
+        tecladoNumerico = new Keyboard(this, R.xml.teclado_numerico, R.integer.TecladoNumerico);
         tecladoVew.setKeyboard(teclado);
         tecladoVew.setOnKeyboardActionListener(this);
         return tecladoVew;
@@ -49,6 +51,27 @@ public class MetodoEntradaTeclado extends InputMethodService
                 break;
             case Keyboard.KEYCODE_DONE:
                 ic.sendKeyEvent(new KeyEvent(KeyEvent.ACTION_DOWN, KeyEvent.KEYCODE_ENTER));
+                break;
+            case Keyboard.KEYCODE_MODE_CHANGE:
+                if(tecladoVew != null) {
+                    if(mKeyboardState == R.integer.telado_normal){
+                        //change to symbol keyboard
+                        if(tecladoNumerico== null){
+                            tecladoNumerico = new Keyboard(this, R.xml.teclado_numerico, R.integer.TecladoNumerico);
+                        }
+
+                        tecladoVew.setKeyboard(tecladoNumerico);
+                    } else {
+                        if(teclado== null){
+                            teclado = new Keyboard(this, R.xml.teclado_padrao, R.integer.telado_normal);
+                        }
+
+                        tecladoVew.setKeyboard(teclado);
+
+                    }
+                    //no shifting
+                    tecladoVew.setShifted(false);
+                }
                 break;
             default:
                 char code = (char)primaryCode;

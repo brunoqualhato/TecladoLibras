@@ -22,8 +22,10 @@ public class Introducao extends MaterialIntroActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         Typeface oTypeface = ResourcesCompat.getFont(this, R.font.libras);
         subscreverFonte("DEFAULT", oTypeface);
+
         addSlide(new SlideFragmentBuilder()
                         .backgroundColor(R.color.colorPrimary)
                         .buttonsColor(R.color.colorAccent)
@@ -37,6 +39,7 @@ public class Introducao extends MaterialIntroActivity {
                         showMessage("Perfeito");
 
                         startActivity(new Intent("android.settings.INPUT_METHOD_SETTINGS"));
+
                         InputMethodManager imeManager = (InputMethodManager)
                                 getApplicationContext().getSystemService(INPUT_METHOD_SERVICE);
                         imeManager.showInputMethodPicker();

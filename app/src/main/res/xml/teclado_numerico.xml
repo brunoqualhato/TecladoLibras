@@ -1,0 +1,32 @@
+<Keyboard xmlns:android="http://schemas.android.com/apk/res/android"
+    android:keyWidth="23.4375%p"
+    android:keyHeight="10%p">
+
+    <Row>
+        <Key android:codes="49"    android:keyLabel="1"  android:keyEdgeFlags="left" />
+        <Key android:codes="50"    android:keyLabel="2" />
+        <Key android:codes="51"    android:keyLabel="3" />
+        <Key android:codes="-5"     android:keyLabel="Del" android:isRepeatable="true" android:horizontalGap="6.25%p" android:keyEdgeFlags="right"/>
+    </Row>
+
+    <Row>
+        <Key android:codes="52"    android:keyLabel="4" android:keyEdgeFlags="left"  />
+        <Key android:codes="53"    android:keyLabel="5" />
+        <Key android:codes="54"    android:keyLabel="6" android:keyEdgeFlags="right"/>
+    </Row>
+    <Row>
+
+        <Key android:codes="55"    android:keyLabel="7" android:keyEdgeFlags="left" />
+        <Key android:codes="56"    android:keyLabel="8" />
+        <Key android:codes="57"    android:keyLabel="9" android:keyEdgeFlags="right"/>
+        <Key android:codes="-2"  android:keyLabel="123" android:horizontalGap="6.25%p"/>
+    </Row>
+
+    <Row>
+        <Key android:codes="0"  android:keyLabel="ABC" android:keyEdgeFlags="left" />
+        <Key android:codes="46"    android:keyLabel="."/>
+        <Key android:codes="48"    android:keyLabel="0" />
+        <Key android:codes="10" android:keyLabel="Ent" android:horizontalGap="6.25%p" android:keyEdgeFlags="right" />
+    </Row>
+
+</Keyboard>
