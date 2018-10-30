@@ -14,7 +14,6 @@ public class MetodoEntradaTeclado extends InputMethodService
 
     private KeyboardView tecladoVew;
     private Keyboard teclado;
-
     private boolean caps = false;
 
     @Override

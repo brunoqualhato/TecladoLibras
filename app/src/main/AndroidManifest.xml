@@ -11,7 +11,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".MainActivity">
+        <activity
+            android:name=".introducao.Introducao"
+            android:theme="@style/Theme.Intro">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -19,13 +21,17 @@
             </intent-filter>
         </activity>
 
-        <service android:name=".MetodoEntradaTeclado"
+        <activity android:name=".atividades.MainActivity" />
+
+        <service
+            android:name=".MetodoEntradaTeclado"
             android:permission="android.permission.BIND_INPUT_METHOD">
             <intent-filter>
                 <action android:name="android.view.InputMethod" />
             </intent-filter>
 
-            <meta-data android:name="android.view.im"
+            <meta-data
+                android:name="android.view.im"
                 android:resource="@xml/method" />
 
         </service>
