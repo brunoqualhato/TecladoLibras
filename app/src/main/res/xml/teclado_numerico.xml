@@ -2,6 +2,10 @@
     android:keyWidth="23.4375%p"
     android:keyHeight="10%p">
 
+    <!--Identificador teclado-->
+    <Row android:keyboardMode="@integer/TecladoNumerico"/>
+
+
     <Row>
         <Key android:codes="49"    android:keyLabel="1"  android:keyEdgeFlags="left" />
         <Key android:codes="50"    android:keyLabel="2" />
@@ -23,10 +27,10 @@
     </Row>
 
     <Row>
-        <Key android:codes="0"  android:keyLabel="ABC" android:keyEdgeFlags="left" />
+        <Key android:codes="-2"  android:keyLabel="ABC" android:keyEdgeFlags="left" />
         <Key android:codes="46"    android:keyLabel="."/>
         <Key android:codes="48"    android:keyLabel="0" />
-        <Key android:codes="10" android:keyLabel="Ent" android:horizontalGap="6.25%p" android:keyEdgeFlags="right" />
+        <Key android:codes="10" android:keyLabel="Enter" android:horizontalGap="6.25%p" android:keyEdgeFlags="right" />
     </Row>
 
 </Keyboard>

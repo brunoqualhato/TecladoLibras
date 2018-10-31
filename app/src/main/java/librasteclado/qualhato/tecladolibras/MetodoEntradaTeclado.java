@@ -4,6 +4,7 @@ package librasteclado.qualhato.tecladolibras;
 import android.inputmethodservice.InputMethodService;
 import android.inputmethodservice.Keyboard;
 import android.inputmethodservice.KeyboardView;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.inputmethod.InputConnection;
@@ -20,8 +21,8 @@ public class MetodoEntradaTeclado extends InputMethodService
     @Override
     public View onCreateInputView() {
         tecladoVew = (KeyboardView) getLayoutInflater().inflate(R.layout.keyboard_view, null);
-        teclado = new Keyboard(this, R.xml.teclado_padrao,0);
-        tecladoNumerico = new Keyboard(this, R.xml.teclado_numerico, R.integer.TecladoNumerico);
+        teclado = new Keyboard(this, R.xml.teclado_padrao);
+        tecladoNumerico = new Keyboard(this, R.xml.teclado_numerico);
         tecladoVew.setKeyboard(teclado);
         tecladoVew.setOnKeyboardActionListener(this);
         return tecladoVew;
@@ -53,6 +54,7 @@ public class MetodoEntradaTeclado extends InputMethodService
                 ic.sendKeyEvent(new KeyEvent(KeyEvent.ACTION_DOWN, KeyEvent.KEYCODE_ENTER));
                 break;
             case Keyboard.KEYCODE_MODE_CHANGE:
+                Log.d("TESTE",""+mKeyboardState);
                 if(tecladoVew != null) {
                     if(mKeyboardState == R.integer.telado_normal){
                         //change to symbol keyboard
@@ -61,16 +63,18 @@ public class MetodoEntradaTeclado extends InputMethodService
                         }
 
                         tecladoVew.setKeyboard(tecladoNumerico);
+                        mKeyboardState = R.integer.TecladoNumerico;
                     } else {
                         if(teclado== null){
                             teclado = new Keyboard(this, R.xml.teclado_padrao, R.integer.telado_normal);
                         }
 
                         tecladoVew.setKeyboard(teclado);
-
+                        mKeyboardState = R.integer.telado_normal;
                     }
                     //no shifting
                     tecladoVew.setShifted(false);
+
                 }
                 break;
             default:
