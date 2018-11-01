@@ -1,5 +1,5 @@
-Libras teclado é um app gratuito para auxiliar deficientes auditivo e também para auxiliar
-quem está aprendendo a Linguagem Brasileira de Sinais
+Libras teclado é um app gratuito para auxiliar deficientes auditivos e também para auxiliar
+quem está aprendendo a Linguagem Brasileira de Sinais.
 
 
 ### Instalação
