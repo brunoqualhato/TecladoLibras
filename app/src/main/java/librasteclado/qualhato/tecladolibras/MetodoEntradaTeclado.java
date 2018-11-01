@@ -9,6 +9,8 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.view.inputmethod.InputConnection;
 
+import librasteclado.qualhato.tecladolibras.util.Vibracao;
+
 
 public class MetodoEntradaTeclado extends InputMethodService
         implements KeyboardView.OnKeyboardActionListener {
@@ -41,8 +43,9 @@ public class MetodoEntradaTeclado extends InputMethodService
     @Override
     public void onKey(int primaryCode, int[] keyCodes) {
         InputConnection ic = getCurrentInputConnection();
-        switch(primaryCode){
-            case Keyboard.KEYCODE_DELETE :
+        Vibracao.ativarVibracao(this,20);
+        switch (primaryCode) {
+            case Keyboard.KEYCODE_DELETE:
                 ic.deleteSurroundingText(1, 0);
                 break;
             case Keyboard.KEYCODE_SHIFT:
@@ -54,35 +57,36 @@ public class MetodoEntradaTeclado extends InputMethodService
                 ic.sendKeyEvent(new KeyEvent(KeyEvent.ACTION_DOWN, KeyEvent.KEYCODE_ENTER));
                 break;
             case Keyboard.KEYCODE_MODE_CHANGE:
-                Log.d("TESTE",""+mKeyboardState);
-                if(tecladoVew != null) {
-                    if(mKeyboardState == R.integer.telado_normal){
-                        //change to symbol keyboard
-                        if(tecladoNumerico== null){
+                Log.d("TESTE", "" + mKeyboardState);
+                if (tecladoVew != null) {
+                    if (mKeyboardState == R.integer.telado_normal) {
+
+                        if (tecladoNumerico == null) {
                             tecladoNumerico = new Keyboard(this, R.xml.teclado_numerico, R.integer.TecladoNumerico);
                         }
 
                         tecladoVew.setKeyboard(tecladoNumerico);
                         mKeyboardState = R.integer.TecladoNumerico;
                     } else {
-                        if(teclado== null){
+
+                        if (teclado == null) {
                             teclado = new Keyboard(this, R.xml.teclado_padrao, R.integer.telado_normal);
                         }
 
                         tecladoVew.setKeyboard(teclado);
                         mKeyboardState = R.integer.telado_normal;
                     }
-                    //no shifting
+
                     tecladoVew.setShifted(false);
 
                 }
                 break;
             default:
-                char code = (char)primaryCode;
-                if(Character.isLetter(code) && caps){
+                char code = (char) primaryCode;
+                if (Character.isLetter(code) && caps) {
                     code = Character.toUpperCase(code);
                 }
-                ic.commitText(String.valueOf(code),1);
+                ic.commitText(String.valueOf(code), 1);
         }
     }
 

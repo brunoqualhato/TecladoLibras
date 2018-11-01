@@ -14,6 +14,7 @@ import agency.tango.materialintroscreen.MessageButtonBehaviour;
 import agency.tango.materialintroscreen.SlideFragmentBuilder;
 import agency.tango.materialintroscreen.animations.IViewTranslation;
 import librasteclado.qualhato.tecladolibras.R;
+import librasteclado.qualhato.tecladolibras.atividades.Ajustes;
 
 import static librasteclado.qualhato.tecladolibras.util.SubscreverFontes.subscreverFonte;
 
@@ -52,6 +53,8 @@ public class Introducao extends MaterialIntroActivity {
                     @Override
                     public void translate(View view, @FloatRange(from = 0, to = 1.0) float percentage) {
                         view.setAlpha(percentage);
+                        Intent i = new Intent(Introducao.this,Ajustes.class);
+                        startActivity(i);
                     }
                 });
     }

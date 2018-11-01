@@ -8,8 +8,7 @@ public class SubscreverFontes {
     public static void subscreverFonte(String staticTypefaceFieldName,
                                        final Typeface newTypeface) {
         try {
-            final Field staticField = Typeface.class
-                    .getDeclaredField(staticTypefaceFieldName);
+            final Field staticField = Typeface.class.getDeclaredField(staticTypefaceFieldName);
             staticField.setAccessible(true);
             staticField.set(null, newTypeface);
         } catch (NoSuchFieldException | IllegalAccessException e) {
