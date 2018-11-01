@@ -1,3 +1,5 @@
+![license](https://img.shields.io/badge/license-MIT-green.svg?longCache=true&style=flat-square)
+
 Libras teclado é um app gratuito para auxiliar deficientes auditivos e também para auxiliar
 quem está aprendendo a Linguagem Brasileira de Sinais.
 
