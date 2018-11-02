@@ -6,7 +6,7 @@ quem está aprendendo a Linguagem Brasileira de Sinais.
 
 ### Instalação
 
-1. Faça o download do .APK [AQUI](https://github.com/brunoqualhato/TecladoLibras/releases/download/1.0/app-debug.apk).
+1. Faça o download do .APK [AQUI](https://github.com/brunoqualhato/TecladoLibras/releases/download/1.0/app-debug.apk) ou teste a versão em dev [AQUI](https://github.com/brunoqualhato/TecladoLibras/releases/download/1.2/app-debug.apk).
 2. Ative as fontes desconhecidas
 3. Fim <3
 
