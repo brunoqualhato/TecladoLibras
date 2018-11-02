@@ -13,6 +13,8 @@ quem está aprendendo a Linguagem Brasileira de Sinais.
 ### Frameworks/Bibliotecas
 * [material-intro-screen](https://github.com/TangoAgency/material-intro-screen)
 * [CircleImageView](https://github.com/hdodenhof/CircleImageView)
+* [LoginButtons](https://github.com/shaishavgandhi05/LoginButtons)
+
 
 
 
