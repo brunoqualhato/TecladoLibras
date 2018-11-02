@@ -3,12 +3,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="librasteclado.qualhato.tecladolibras">
 
-    <!-- Permissão necessaria para ativar a vibracao-->
+    <!-- Permissão necessaria para ativar a vibracao -->
     <uses-permission android:name="android.permission.VIBRATE" />
 
     <!-- Permissão necessaria para sugestões de palavras -->
     <uses-permission android:name="android.permission.WRITE_USER_DICTIONARY" />
 
+    <!--Permissão necessaria para obter internet-->
+    <uses-permission android:name="android.permission.INTERNET"/>
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -40,7 +42,8 @@
                 android:resource="@xml/method" />
         </service>
 
-        <activity android:name=".atividades.Ajustes"></activity>
+        <activity android:name=".atividades.Ajustes" />
+        <activity android:name=".atividades.Sobre"></activity>
     </application>
 
 </manifest>

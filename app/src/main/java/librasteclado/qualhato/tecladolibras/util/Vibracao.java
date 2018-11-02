@@ -13,17 +13,17 @@ import android.widget.SeekBar;
 public class Vibracao {
 
 
-    public static void ativarVibracao(Context mContext,int intencidade){
+    public static void ativarVibracao(Context mContext,int intensidade){
         Vibrator v = (Vibrator) mContext.getSystemService(Context.VIBRATOR_SERVICE);
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            v.vibrate(VibrationEffect.createOneShot(intencidade, VibrationEffect.DEFAULT_AMPLITUDE));
+            v.vibrate(VibrationEffect.createOneShot(intensidade, VibrationEffect.DEFAULT_AMPLITUDE));
         } else {
-            v.vibrate(intencidade);
+            v.vibrate(intensidade);
         }
     }
 
-    public static void mostrarAjusteVibracao(Activity mActivity) {
+    public static void mostrarAjusteVibracao(final Activity mActivity) {
         final AlertDialog.Builder popDialog = new AlertDialog.Builder(mActivity);
         final SeekBar seek = new SeekBar(mActivity);
         seek.setMax(255);
@@ -48,6 +48,8 @@ public class Vibracao {
 
 
                 Log.d("intensidade",""+progress);
+                Vibracao.ativarVibracao(mActivity,progress);
+                PreferenciasCompartilhadas.setValor(mActivity,"vibracao",progress);
             }
 
 

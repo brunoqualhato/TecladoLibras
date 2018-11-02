@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".atividades.Sobre">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/circle_img"
+            android:layout_width="159dp"
+            android:layout_height="149dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="96dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginEnd="104dp"
+            android:layout_marginBottom="-1dp"
+            android:src="@drawable/eu"
+            tools:src="@drawable/eu" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Bruno Qualhato"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat"
+            android:textSize="20sp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="24dp" />
+
+        <com.shaishavgandhi.loginbuttons.TwitterButton
+            android:id="@+id/meu_twitter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Meu Twittter"
+            app:iconSize="30dp" />
+
+        <com.shaishavgandhi.loginbuttons.FacebookButton
+            android:id="@+id/meu_facebook"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Meu Facebook"
+            app:iconSize="30dp" />
+
+        <com.shaishavgandhi.loginbuttons.LinkedInButton
+            android:id="@+id/meu_linkedin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Meu Linkedin"
+            app:iconSize="30dp" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">Teclado Libras</string>
+    <string name="meu_linkedin">Meu LinkedIn</string>
 
     <integer name="TecladoNumerico">1</integer>
     <integer name="telado_normal">0</integer>

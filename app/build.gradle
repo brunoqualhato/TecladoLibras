@@ -30,4 +30,6 @@ dependencies {
 
     //bibliotecas que nos ajudaram no desenvolvimento
     implementation 'agency.tango.android:material-intro-screen:0.0.5'
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
+    implementation 'com.shaishavgandhi:login-buttons:1.0.0'
 }
