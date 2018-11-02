@@ -23,5 +23,5 @@ quem está aprendendo a Linguagem Brasileira de Sinais.
 
 
 ## Autor
-| [<img src="https://avatars2.githubusercontent.com/u/24703194?s=400&u=84672ff37d2a5181047f82a157e2d8a5761bcd6a&v=4"><br><sub>Bruno Qualhato</sub>](https://github.com/brunoqualhato) |
+| [<img src="https://avatars2.githubusercontent.com/u/24703194?s=400&u=84672ff37d2a5181047f82a157e2d8a5761bcd6a&v=4" width="150" height="150"><br><sub>Bruno Qualhato</sub>](https://github.com/brunoqualhato) |
 | :---: |
