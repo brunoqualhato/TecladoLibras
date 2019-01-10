@@ -1,15 +1,19 @@
 package librasteclado.qualhato.tecladolibras;
 
 
+import android.graphics.Typeface;
 import android.inputmethodservice.InputMethodService;
 import android.inputmethodservice.Keyboard;
 import android.inputmethodservice.KeyboardView;
+import android.support.v4.content.res.ResourcesCompat;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.inputmethod.InputConnection;
 
 import librasteclado.qualhato.tecladolibras.util.Vibracao;
+
+import static librasteclado.qualhato.tecladolibras.util.SubscreverFontes.subscreverFonte;
 
 
 public class MetodoEntradaTeclado extends InputMethodService
@@ -22,6 +26,9 @@ public class MetodoEntradaTeclado extends InputMethodService
 
     @Override
     public View onCreateInputView() {
+        Typeface oTypeface = ResourcesCompat.getFont(this, R.font.libras);
+        subscreverFonte("DEFAULT", oTypeface);
+
         tecladoVew = (KeyboardView) getLayoutInflater().inflate(R.layout.keyboard_view, null);
         teclado = new Keyboard(this, R.xml.teclado_padrao);
         tecladoNumerico = new Keyboard(this, R.xml.teclado_numerico);

@@ -27,11 +27,6 @@ public class Introducao extends MaterialIntroActivity {
             startActivity(new Intent(this,Ajustes.class));
         }
 
-
-
-        Typeface oTypeface = ResourcesCompat.getFont(this, R.font.libras);
-        subscreverFonte("DEFAULT", oTypeface);
-
         addSlide(new SlideFragmentBuilder()
                         .backgroundColor(R.color.colorPrimary)
                         .buttonsColor(R.color.colorAccent)
